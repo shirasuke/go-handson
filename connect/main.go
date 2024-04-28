@@ -20,7 +20,8 @@ func (m *Mydata) Str() string{
 } 
 
 func main() {
-	  dsn :="host=localhost port=5432 dbname=postgres user=postgres password=postgres sslmode=disable"
+	//.envに入れてできるようにする
+	  dsn :=""
     db, err := sql.Open("postgres", dsn)
     if err != nil {
         log.Fatal(err)
